@@ -34,10 +34,3 @@ RUN pip install -e llama_repo
 # Set a fixed model cache directory.
 ENV FVCORE_CACHE="/tmp"
 WORKDIR /home/appuser/llama_repo
-
-# Copy model weights from host
-COPY ../../../llama/tokenizer.model /home/appuser/llama_repo/
-COPY ../../../llama/tokenizer_checklist.chk /home/appuser/llama_repo/
-COPY ../../../llama/llama-2-7b /home/appuser/llama_repo/
-COPY ../../../llama/llama-2-13b /home/appuser/llama_repo/
-COPY ../../../llama/llama-2-70b /home/appuser/llama_repo/
